@@ -1,14 +1,33 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const SkillsPage = ({ darkMode }) => {
   const coreSkills = [
-    'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap', 'jQuery',
-    'React', 'Redux Toolkit', 'TypeScript', 'Git', 'Redux', 'Tailwind CSS'
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "Bootstrap",
+    "jQuery",
+    "React",
+    "Redux Toolkit",
+    "TypeScript",
+    "Git",
+    "Redux",
+    "Tailwind CSS",
   ];
-  
+
   const additionalSkills = [
-    'REST APIs', 'Responsive Design', 'i18n', 'Unit Testing', 'Agile'
+    "REST APIs",
+    "GraphQL APIs (Familiar)",
+    "Next.js (Basics)",
+    "Node.js (Basics)",
+    "WebSockets (Client-side)",
+    "Responsive Design",
+    "i18n",
+    "Unit Testing",
+    "Agile",
+    "Vite",
+    "Problem Solving",
   ];
 
   return (
@@ -23,19 +42,29 @@ const SkillsPage = ({ darkMode }) => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'} mb-12 text-center`}
+        className={`text-4xl font-bold ${
+          darkMode ? "text-white" : "text-gray-800"
+        } mb-12 text-center`}
       >
         Technical Skills
       </motion.h2>
-      
+
       <div className="grid md:grid-cols-2 gap-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
-          className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-8`}
+          className={`${
+            darkMode ? "bg-gray-800" : "bg-white"
+          } rounded-xl shadow-lg p-8`}
         >
-          <h3 className={`text-2xl font-semibold ${darkMode ? 'text-indigo-400' : 'text-indigo-600'} mb-6`}>Core Skills</h3>
+          <h3
+            className={`text-2xl font-semibold ${
+              darkMode ? "text-indigo-400" : "text-indigo-600"
+            } mb-6`}
+          >
+            Core Skills
+          </h3>
           <div className="flex flex-wrap gap-3">
             {coreSkills.map((skill, index) => (
               <motion.span
@@ -45,8 +74,8 @@ const SkillsPage = ({ darkMode }) => {
                 transition={{ delay: 0.4 + index * 0.05 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium ${
                   darkMode
-                    ? 'bg-indigo-900 text-indigo-300'
-                    : 'bg-indigo-100 text-indigo-700'
+                    ? "bg-indigo-900 text-indigo-300"
+                    : "bg-indigo-100 text-indigo-700"
                 }`}
               >
                 {skill}
@@ -59,9 +88,17 @@ const SkillsPage = ({ darkMode }) => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-lg p-8`}
+          className={`${
+            darkMode ? "bg-gray-800" : "bg-white"
+          } rounded-xl shadow-lg p-8`}
         >
-          <h3 className={`text-2xl font-semibold ${darkMode ? 'text-indigo-400' : 'text-indigo-600'} mb-6`}>Additional Skills</h3>
+          <h3
+            className={`text-2xl font-semibold ${
+              darkMode ? "text-indigo-400" : "text-indigo-600"
+            } mb-6`}
+          >
+            Additional Skills
+          </h3>
           <div className="flex flex-wrap gap-3">
             {additionalSkills.map((skill, index) => (
               <motion.span
@@ -71,8 +108,8 @@ const SkillsPage = ({ darkMode }) => {
                 transition={{ delay: 0.5 + index * 0.05 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium ${
                   darkMode
-                    ? 'bg-gray-700 text-gray-300'
-                    : 'bg-gray-100 text-gray-700'
+                    ? "bg-gray-700 text-gray-300"
+                    : "bg-gray-100 text-gray-700"
                 }`}
               >
                 {skill}
